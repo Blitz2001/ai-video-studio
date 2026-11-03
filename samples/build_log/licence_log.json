@@ -1,0 +1,82 @@
+[
+  {
+    "id": "rec_demo_landscape",
+    "kind": "screen_recording",
+    "path": "assets/demo.mp4",
+    "licence": "self-generated",
+    "origin": "Playwright screen recording of the locally built app",
+    "attribution": ""
+  },
+  {
+    "id": "rec_demo_portrait",
+    "kind": "screen_recording",
+    "path": "assets/demo_portrait.mp4",
+    "licence": "self-generated",
+    "origin": "Playwright screen recording of the locally built app",
+    "attribution": ""
+  },
+  {
+    "id": "rec_step1_landscape",
+    "kind": "screen_recording",
+    "path": "assets/step1.mp4",
+    "licence": "self-generated",
+    "origin": "Playwright screen recording of the locally built app",
+    "attribution": ""
+  },
+  {
+    "id": "rec_step2_landscape",
+    "kind": "screen_recording",
+    "path": "assets/step2.mp4",
+    "licence": "self-generated",
+    "origin": "Playwright screen recording of the locally built app",
+    "attribution": ""
+  },
+  {
+    "id": "rec_step3_landscape",
+    "kind": "screen_recording",
+    "path": "assets/step3.mp4",
+    "licence": "self-generated",
+    "origin": "Playwright screen recording of the locally built app",
+    "attribution": ""
+  },
+  {
+    "id": "rec_step3_portrait",
+    "kind": "screen_recording",
+    "path": "assets/step3_portrait.mp4",
+    "licence": "self-generated",
+    "origin": "Playwright screen recording of the locally built app",
+    "attribution": ""
+  },
+  {
+    "id": "rec_wrap_landscape",
+    "kind": "animation",
+    "path": "assets/wrap.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib summary card",
+    "attribution": ""
+  },
+  {
+    "id": "music",
+    "kind": "music",
+    "path": "assets/music.wav",
+    "licence": "self-generated",
+    "origin": "numpy-synthesised ambient pad (avs.media.music)",
+    "attribution": ""
+  },
+  {
+    "id": "font",
+    "kind": "font",
+    "path": "/usr/share/fonts/opentype/inter/Inter-Bold.otf",
+    "licence": "OFL-1.1",
+    "origin": "caption and card typeface",
+    "attribution": ""
+  },
+  {
+    "id": "thumbnail",
+    "kind": "thumbnail",
+    "path": "out/thumbnail.png",
+    "licence": "self-generated",
+    "origin": "Pillow composite of a self-generated frame",
+    "attribution": ""
+  }
+]

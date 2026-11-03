@@ -1,0 +1,37 @@
+{
+  "backend": "kokoro",
+  "voice": "am_michael",
+  "lines": [
+    {
+      "segment_id": "hook",
+      "path": "voice/hook.wav",
+      "duration": 24.478
+    },
+    {
+      "segment_id": "trend",
+      "path": "voice/trend.wav",
+      "duration": 25.779333333333334
+    },
+    {
+      "segment_id": "gap",
+      "path": "voice/gap.wav",
+      "duration": 19.187333333333335
+    },
+    {
+      "segment_id": "countries",
+      "path": "voice/countries.wav",
+      "duration": 20.808666666666667
+    },
+    {
+      "segment_id": "wealth",
+      "path": "voice/wealth.wav",
+      "duration": 27.272666666666666
+    },
+    {
+      "segment_id": "caveats",
+      "path": "voice/caveats.wav",
+      "duration": 15.112666666666666
+    }
+  ],
+  "realistic": true
+}

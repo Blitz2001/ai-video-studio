@@ -1,0 +1,187 @@
+1
+00:00:02,250 --> 00:00:04,630
+This is a focus timer web app,
+
+2
+00:00:04,630 --> 00:00:07,076
+built from an empty folder by a
+
+3
+00:00:07,076 --> 00:00:10,184
+build agent, while I recorded the screen.
+
+4
+00:00:10,184 --> 00:00:12,498
+The finished app is 153 lines
+
+5
+00:00:12,498 --> 00:00:14,746
+in 3 files across 3 commits.
+
+6
+00:00:14,746 --> 00:00:16,333
+Here's how it came
+
+7
+00:00:16,333 --> 00:00:18,250
+together, step by step.
+
+8
+00:00:18,250 --> 00:00:19,074
+First:
+
+9
+00:00:19,074 --> 00:00:20,792
+layout and styling.
+
+10
+00:00:20,792 --> 00:00:21,822
+The goal:
+
+11
+00:00:21,822 --> 00:00:24,364
+show a 25:00 timer, a label and
+
+12
+00:00:24,364 --> 00:00:27,731
+Start / Reset buttons, centred, dark theme.
+
+13
+00:00:27,731 --> 00:00:30,204
+Get the layout right first, so
+
+14
+00:00:30,204 --> 00:00:32,952
+the logic later has stable element
+
+15
+00:00:32,952 --> 00:00:34,532
+ids to hook into.
+
+16
+00:00:34,532 --> 00:00:37,349
+This commit changed 2 files, adding
+
+17
+00:00:37,349 --> 00:00:39,410
+57 lines and removing 0.
+
+18
+00:00:39,410 --> 00:00:40,117
+Next:
+
+19
+00:00:40,117 --> 00:00:41,531
+countdown logic.
+
+20
+00:00:41,531 --> 00:00:42,496
+The goal:
+
+21
+00:00:42,496 --> 00:00:45,195
+start/pause toggles a countdown that
+
+22
+00:00:45,195 --> 00:00:47,124
+updates once per second;
+
+23
+00:00:47,124 --> 00:00:48,988
+Reset returns to 25:00.
+
+24
+00:00:48,988 --> 00:00:51,881
+The timer measures elapsed time against
+
+25
+00:00:51,881 --> 00:00:54,645
+a start timestamp instead of counting
+
+26
+00:00:54,645 --> 00:00:57,088
+ticks, so it stays accurate when
+
+27
+00:00:57,088 --> 00:00:59,916
+the browser throttles background tabs.
+
+28
+00:00:59,916 --> 00:01:02,552
+This commit changed 2 files, adding
+
+29
+00:01:02,552 --> 00:01:04,480
+57 lines and removing 0.
+
+30
+00:01:04,480 --> 00:01:05,323
+Finally:
+
+31
+00:01:05,323 --> 00:01:07,974
+progress ring, sessions and shortcuts.
+
+32
+00:01:07,974 --> 00:01:08,877
+The goal:
+
+33
+00:01:08,877 --> 00:01:10,744
+add an SVG progress ring,
+
+34
+00:01:10,744 --> 00:01:13,274
+a completed-session counter saved in
+
+35
+00:01:13,274 --> 00:01:15,925
+localStorage and a Space-bar shortcut.
+
+36
+00:01:15,925 --> 00:01:18,334
+A ring shows progress at a glance,
+
+37
+00:01:18,334 --> 00:01:21,165
+and the keyboard shortcut means you never
+
+38
+00:01:21,165 --> 00:01:23,333
+need the mouse while focusing.
+
+39
+00:01:23,333 --> 00:01:25,803
+This commit changed 3 files, adding
+
+40
+00:01:25,803 --> 00:01:27,610
+40 lines and removing 1.
+
+41
+00:01:27,610 --> 00:01:29,193
+8 of 8 browser tests
+
+42
+00:01:29,193 --> 00:01:31,141
+passed on the final build,
+
+43
+00:01:31,141 --> 00:01:33,516
+with 0 external network requests.
+
+44
+00:01:33,516 --> 00:01:35,769
+Every step ran the full browser
+
+45
+00:01:35,769 --> 00:01:38,265
+test suite before it was committed.
+
+46
+00:01:38,265 --> 00:01:39,422
+I'm Compiled.
+
+47
+00:01:39,422 --> 00:01:41,370
+See you in the next build.

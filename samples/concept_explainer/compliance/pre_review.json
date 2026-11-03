@@ -1,0 +1,44 @@
+{
+  "stage": "pre_review",
+  "results": [
+    {
+      "check": "claims_have_sources",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "no_health_finance_legal_advice",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "asset_licences",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "synthetic_content_disclosure",
+      "passed": true,
+      "severity": "block",
+      "details": [
+        "disclosed: realistic synthetic voice (kokoro/am_michael)"
+      ]
+    },
+    {
+      "check": "upload_as_private",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "concept:simulation_reproducible",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    }
+  ],
+  "created_at": "2026-11-03T21:05:02+00:00"
+}

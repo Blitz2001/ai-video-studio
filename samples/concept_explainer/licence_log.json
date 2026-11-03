@@ -1,0 +1,90 @@
+[
+  {
+    "id": "anim_hook_landscape",
+    "kind": "animation",
+    "path": "assets/hook.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib contour_descent scene, seeded simulation",
+    "attribution": ""
+  },
+  {
+    "id": "anim_hook_portrait",
+    "kind": "animation",
+    "path": "assets/hook_portrait.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib contour_descent scene, seeded simulation",
+    "attribution": ""
+  },
+  {
+    "id": "anim_slope_landscape",
+    "kind": "animation",
+    "path": "assets/slope.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib gradient_1d scene, seeded simulation",
+    "attribution": ""
+  },
+  {
+    "id": "anim_slope_portrait",
+    "kind": "animation",
+    "path": "assets/slope_portrait.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib gradient_1d scene, seeded simulation",
+    "attribution": ""
+  },
+  {
+    "id": "anim_learning_rate_landscape",
+    "kind": "animation",
+    "path": "assets/learning_rate.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib lr_compare scene, seeded simulation",
+    "attribution": ""
+  },
+  {
+    "id": "anim_learning_rate_portrait",
+    "kind": "animation",
+    "path": "assets/learning_rate_portrait.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib lr_compare scene, seeded simulation",
+    "attribution": ""
+  },
+  {
+    "id": "anim_stochastic_landscape",
+    "kind": "animation",
+    "path": "assets/stochastic.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib sgd_vs_gd scene, seeded simulation",
+    "attribution": ""
+  },
+  {
+    "id": "anim_history_landscape",
+    "kind": "animation",
+    "path": "assets/history.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib bullet_card scene, seeded simulation",
+    "attribution": ""
+  },
+  {
+    "id": "music",
+    "kind": "music",
+    "path": "assets/music.wav",
+    "licence": "self-generated",
+    "origin": "numpy-synthesised ambient pad (avs.media.music)",
+    "attribution": ""
+  },
+  {
+    "id": "font",
+    "kind": "font",
+    "path": "/usr/share/fonts/opentype/inter/Inter-Bold.otf",
+    "licence": "OFL-1.1",
+    "origin": "caption and card typeface",
+    "attribution": ""
+  },
+  {
+    "id": "thumbnail",
+    "kind": "thumbnail",
+    "path": "out/thumbnail.png",
+    "licence": "self-generated",
+    "origin": "Pillow composite of a self-generated frame",
+    "attribution": ""
+  }
+]

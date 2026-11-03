@@ -1,0 +1,32 @@
+{
+  "backend": "kokoro",
+  "voice": "am_michael",
+  "lines": [
+    {
+      "segment_id": "demo",
+      "path": "voice/demo.wav",
+      "duration": 16.35
+    },
+    {
+      "segment_id": "step1",
+      "path": "voice/step1.wav",
+      "duration": 21.512666666666668
+    },
+    {
+      "segment_id": "step2",
+      "path": "voice/step2.wav",
+      "duration": 25.416666666666668
+    },
+    {
+      "segment_id": "step3",
+      "path": "voice/step3.wav",
+      "duration": 23.47533333333333
+    },
+    {
+      "segment_id": "wrap",
+      "path": "voice/wrap.wav",
+      "duration": 14.11
+    }
+  ],
+  "realistic": true
+}

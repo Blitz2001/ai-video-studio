@@ -1,0 +1,32 @@
+{
+  "backend": "kokoro",
+  "voice": "am_michael",
+  "lines": [
+    {
+      "segment_id": "hook",
+      "path": "voice/hook.wav",
+      "duration": 15.368666666666666
+    },
+    {
+      "segment_id": "slope",
+      "path": "voice/slope.wav",
+      "duration": 16.542
+    },
+    {
+      "segment_id": "learning_rate",
+      "path": "voice/learning_rate.wav",
+      "duration": 28.296666666666667
+    },
+    {
+      "segment_id": "stochastic",
+      "path": "voice/stochastic.wav",
+      "duration": 18.888666666666666
+    },
+    {
+      "segment_id": "history",
+      "path": "voice/history.wav",
+      "duration": 17.715333333333334
+    }
+  ],
+  "realistic": true
+}

@@ -10,16 +10,19 @@ avs dashboard                        # watch, check the sources, approve or reje
 avs publish                          # upload approved videos to YouTube as PRIVATE (daily cap applies)
 ```
 
-| Sample | Format | What it shows |
-|---|---|---|
-| [`samples/data_story/`](samples/data_story) | `data_story` | 142 countries of Gapminder data: who gained life expectancy, who stalled, and what income does and doesn't explain |
-| [`samples/concept_explainer/`](samples/concept_explainer) | `concept_explainer` | Gradient descent, animated from a seeded simulation: three learning rates that crawl, converge and diverge |
-| [`samples/build_log/`](samples/build_log) | `build_log` | A build agent writes a focus-timer web app in 3 tested commits while Playwright records the screen |
+| Sample | Format | Length (16:9 / short) | What it shows |
+|---|---|---|---|
+| [`samples/data_story/`](samples/data_story) | `data_story` | 2:17 / 0:52 | 142 countries of Gapminder data: who gained life expectancy, who stalled, and what income does and doesn't explain |
+| [`samples/concept_explainer/`](samples/concept_explainer) | `concept_explainer` | 1:41 / 0:34 | Gradient descent, animated from a seeded simulation: three learning rates that crawl, converge and diverge |
+| [`samples/build_log/`](samples/build_log) | `build_log` | 1:45 / 0:42 | A build agent writes a focus-timer web app in 3 tested commits while Playwright records the screen |
+| [`samples/blocked_duplicate/`](samples/blocked_duplicate) | `data_story` | not rendered | The same data_story run again: **blocked at the script gate** by the similarity check (cosine 1.000 ≥ 0.80) |
 
 Each sample folder has the 16:9 video, the 9:16 short, the thumbnail, `metadata.json` (what would be sent to
 YouTube), `captions.srt`, `script.json` (every claim with its source), the compliance reports and the licence log.
 
 ---
+
+![Review dashboard: a run blocked by the similarity gate, with each claim shown next to its source](docs/dashboard.png)
 
 ## Architecture
 
@@ -123,7 +126,8 @@ avs dashboard
 ```
 
 Requirements: Python 3.10+, ffmpeg on PATH (or the one bundled with `imageio-ffmpeg`), git.
-No GPU. Peak RAM during a render is about 1.5 GB.
+No GPU. Measured on a 4-core CPU box: a full run takes 6–8 minutes per video (both cuts), and the
+pipeline's peak memory, including Chromium during build_log, was 2.7 GB.
 
 ### Choosing the LLM
 
