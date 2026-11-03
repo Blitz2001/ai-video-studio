@@ -1,0 +1,47 @@
+# AI Video Studio configuration. Secrets live in .env, never here.
+
+channel:
+  name: "Compiled"
+  niche: "CS/ML explainers and build logs"
+  tagline: "Computer science, compiled into minutes."
+  default_language: "en"
+  youtube_category_id: "28"     # Science & Technology
+  code_url: ""                  # public repo link; computation/build sources in descriptions point here
+  timezone: "Asia/Colombo"      # SLST, UTC+05:30. Daily cap counts days in this zone.
+
+llm:
+  provider: "gemini"            # gemini | claude | openai | offline
+  fallback_to_offline: true     # missing key or failed call -> deterministic template writer
+
+voice:
+  backend: "kokoro"             # kokoro | piper | recorded | silent
+  kokoro_model: "models/kokoro/kokoro-v1.0.int8.onnx"
+  kokoro_voices: "models/kokoro/voices-v1.0.bin"
+  kokoro_voice: "am_michael"
+  kokoro_speed: 1.0
+  piper_model: "models/piper/en_US-lessac-medium.onnx"
+  recorded_dir: "recordings"    # <run_id>/<segment_id>.wav when backend = recorded
+
+render:
+  fps: 30
+  landscape: [1920, 1080]
+  portrait: [1080, 1920]
+  make_short: true
+  short_max_seconds: 58
+  music_volume_db: -26
+  crf: 23
+
+compliance:
+  similarity_threshold:         # cosine; at or above this blocks the script (per embedder)
+    local: 0.80
+    gemini: 0.93
+  embedder: "auto"              # auto | gemini | local
+  blocked_advice_domains: ["health", "finance", "legal"]
+  allowed_licences: ["self-generated", "CC0-1.0", "CC-BY-4.0", "public-domain", "OFL-1.1", "Bitstream-Vera"]
+  attribution_required: ["CC-BY-4.0"]
+  realistic_voice_backends: ["kokoro", "piper", "gemini_tts", "elevenlabs"]
+
+publish:
+  daily_upload_cap: 1
+  privacy_status: "private"     # the publisher refuses anything else
+  upload_captions: true

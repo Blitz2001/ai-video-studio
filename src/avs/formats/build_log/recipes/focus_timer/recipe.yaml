@@ -1,0 +1,44 @@
+name: focus_timer
+title: "a focus timer web app"
+pitch: "A Pomodoro-style focus timer in plain HTML, CSS and JavaScript: no frameworks, no build step."
+stack: "HTML, CSS, vanilla JavaScript"
+steps:
+  - id: step1
+    title: "Layout and styling"
+    goal: "Show a 25:00 timer, a label and Start / Reset buttons, centred, dark theme."
+    why: "Get the layout right first, so the logic later has stable element ids to hook into."
+    tests:
+      - name: "shows 25:00 on load"
+        do: [{goto: "index.html"}, {expect_text: ["#time", "25:00"]}]
+      - name: "has start and reset buttons"
+        do: [{goto: "index.html"}, {expect_count: ["button", 2]}]
+  - id: step2
+    title: "Countdown logic"
+    goal: "Start/pause toggles a countdown that updates once per second; Reset returns to 25:00."
+    why: "The timer measures elapsed time against a start timestamp instead of counting ticks, so it stays accurate when the browser throttles background tabs."
+    tests:
+      - name: "counts down after start"
+        do: [{goto: "index.html?speed=120"}, {click: "#start"}, {wait: 1200}, {expect_not_text: ["#time", "25:00"]}]
+      - name: "start button becomes pause"
+        do: [{goto: "index.html"}, {click: "#start"}, {expect_text: ["#start", "Pause"]}]
+      - name: "reset returns to 25:00"
+        do: [{goto: "index.html?speed=120"}, {click: "#start"}, {wait: 800}, {click: "#reset"}, {expect_text: ["#time", "25:00"]}]
+  - id: step3
+    title: "Progress ring, sessions and shortcuts"
+    goal: "Add an SVG progress ring, a completed-session counter saved in localStorage and a Space-bar shortcut."
+    why: "A ring shows progress at a glance, and the keyboard shortcut means you never need the mouse while focusing."
+    tests:
+      - name: "progress ring is drawn"
+        do: [{goto: "index.html"}, {expect_count: ["svg circle.progress", 1]}]
+      - name: "space bar starts the timer"
+        do: [{goto: "index.html"}, {press: "Space"}, {expect_text: ["#start", "Pause"]}]
+      - name: "completing a session increments the counter"
+        do: [{goto: "index.html?speed=3000"}, {click: "#start"}, {wait: 1500}, {expect_text: ["#sessions", "1"]}]
+demo:
+  - {goto: "index.html?speed=90"}
+  - {click: "#start"}
+  - {wait: 2500}
+  - {press: "Space"}
+  - {wait: 700}
+  - {press: "Space"}
+  - {wait: 2000}

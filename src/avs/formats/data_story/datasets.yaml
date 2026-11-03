@@ -1,0 +1,64 @@
+# Dataset registry for the data_story format. `--topic` may be a key below or
+# any words that appear in a dataset's title/keywords.
+#
+# loader: bundled   -> CSV snapshot in data/datasets/ (checked into the repo)
+#         owid      -> https://ourworldindata.org/grapher/<slug>.csv  (CC-BY-4.0)
+#         worldbank -> api.worldbank.org indicator (CC-BY-4.0)
+#         kaggle    -> kaggle datasets download (needs KAGGLE_USERNAME/KAGGLE_KEY;
+#                      licence must be on the allow-list or compliance blocks it)
+# Live loaders cache to data/datasets/cache/ and fall back to the cache offline.
+
+gapminder:
+  title: "Gapminder: life expectancy, GDP per capita and population (1952-2007)"
+  keywords: [life expectancy, health, wealth, gdp, gapminder, longevity]
+  loader: bundled
+  file: gapminder.csv
+  publisher: "Gapminder Foundation"
+  url: "https://www.gapminder.org/data/"
+  licence: CC-BY-4.0
+  entity: country
+  group: continent
+  year: year
+  metric: lifeExp
+  metric_label: "life expectancy"
+  unit: years
+  weight: pop
+  x_metric: gdpPercap
+  x_label: "GDP per person (US$, inflation-adjusted, log scale)"
+  angle: "How the world got healthier, and whether getting richer explains it"
+
+owid_life_expectancy:
+  title: "Life expectancy at birth (Our World in Data)"
+  keywords: [life expectancy owid]
+  loader: owid
+  slug: life-expectancy
+  publisher: "Our World in Data (UN WPP; Riley 2005; Zijdeman et al. 2015)"
+  url: "https://ourworldindata.org/grapher/life-expectancy"
+  licence: CC-BY-4.0
+  metric_label: "life expectancy"
+  unit: years
+  angle: "Two centuries of longer lives"
+
+owid_co2_per_capita:
+  title: "CO2 emissions per capita (Our World in Data)"
+  keywords: [co2, emissions, climate, carbon]
+  loader: owid
+  slug: co-emissions-per-capita
+  publisher: "Our World in Data (Global Carbon Project)"
+  url: "https://ourworldindata.org/grapher/co-emissions-per-capita"
+  licence: CC-BY-4.0
+  metric_label: "CO2 emissions per person"
+  unit: tonnes
+  angle: "Who emits the most carbon per person, and how that changed"
+
+worldbank_internet:
+  title: "Individuals using the Internet, % of population (World Bank WDI)"
+  keywords: [internet, digital, connectivity]
+  loader: worldbank
+  indicator: IT.NET.USER.ZS
+  publisher: "World Bank, World Development Indicators (ITU)"
+  url: "https://data.worldbank.org/indicator/IT.NET.USER.ZS"
+  licence: CC-BY-4.0
+  metric_label: "share of people online"
+  unit: "%"
+  angle: "How fast the world got online"
