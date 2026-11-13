@@ -1,0 +1,94 @@
+# Curated knowledge for concept_explainer. Every fact the narration may use is
+# here with its source, or is computed by the seeded simulation in sims.py.
+# Adding a concept = add an entry here + a storyboard() branch in plugin.py.
+
+gradient_descent:
+  title: "Gradient descent"
+  keywords: [gradient descent, optimisation, optimization, learning rate, sgd]
+  sources:
+    - id: wiki_gd
+      title: "Gradient descent"
+      kind: web
+      publisher: "Wikipedia"
+      url: "https://en.wikipedia.org/wiki/Gradient_descent"
+      licence: CC-BY-SA-4.0
+    - id: dlbook
+      title: "Deep Learning, ch. 4.3 Gradient-Based Optimization (Goodfellow, Bengio, Courville, 2016)"
+      kind: book
+      publisher: "MIT Press"
+      url: "https://www.deeplearningbook.org/contents/numerical.html"
+      reference: "Goodfellow, Bengio & Courville (2016), Deep Learning, section 4.3"
+    - id: wiki_sgd
+      title: "Stochastic gradient descent"
+      kind: web
+      publisher: "Wikipedia"
+      url: "https://en.wikipedia.org/wiki/Stochastic_gradient_descent"
+  facts:
+    - id: def
+      source_id: dlbook
+      text: "Gradient descent reduces a function by taking steps in the direction of the negative gradient."
+    - id: lr_def
+      source_id: dlbook
+      text: "The learning rate is a positive scalar that sets the size of each step."
+    - id: cauchy
+      source_id: wiki_gd
+      text: "Augustin-Louis Cauchy first suggested gradient descent in 1847."
+    - id: sgd
+      source_id: wiki_sgd
+      text: "Stochastic gradient descent estimates the gradient from a randomly selected subset of the data instead of the whole data set."
+
+sorting:
+  title: "Bubble sort vs merge sort"
+  keywords: [sorting, sort, bubble sort, merge sort, algorithms]
+  sources:
+    - id: wiki_bubble
+      title: "Bubble sort"
+      kind: web
+      publisher: "Wikipedia"
+      url: "https://en.wikipedia.org/wiki/Bubble_sort"
+    - id: wiki_merge
+      title: "Merge sort"
+      kind: web
+      publisher: "Wikipedia"
+      url: "https://en.wikipedia.org/wiki/Merge_sort"
+  facts:
+    - id: bubble_def
+      source_id: wiki_bubble
+      text: "Bubble sort repeatedly swaps adjacent elements that are in the wrong order."
+    - id: bubble_big_o
+      source_id: wiki_bubble
+      text: "Bubble sort has a worst-case and average complexity of O(n^2)."
+    - id: merge_def
+      source_id: wiki_merge
+      text: "Merge sort is a divide-and-conquer algorithm that splits a list, sorts the halves and merges them."
+    - id: merge_big_o
+      source_id: wiki_merge
+      text: "Merge sort runs in O(n log n) time in the worst case."
+    - id: von_neumann
+      source_id: wiki_merge
+      text: "Merge sort was invented by John von Neumann in 1945."
+
+rag:
+  title: "How retrieval-augmented generation (RAG) works"
+  keywords: [rag, retrieval, retrieval-augmented generation, vector search, embeddings, llm]
+  sources:
+    - id: lewis2020
+      title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al., 2020)"
+      kind: web
+      publisher: "arXiv / NeurIPS 2020"
+      url: "https://arxiv.org/abs/2005.11401"
+    - id: wiki_rag
+      title: "Retrieval-augmented generation"
+      kind: web
+      publisher: "Wikipedia"
+      url: "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+  facts:
+    - id: rag_paper
+      source_id: lewis2020
+      text: "Retrieval-augmented generation was introduced by Lewis and colleagues in a 2020 paper."
+    - id: rag_def
+      source_id: wiki_rag
+      text: "RAG lets a language model retrieve relevant documents and use them as context when it generates an answer."
+    - id: rag_why
+      source_id: wiki_rag
+      text: "Retrieval lets a model use information that was not in its training data, and lets answers cite their sources."

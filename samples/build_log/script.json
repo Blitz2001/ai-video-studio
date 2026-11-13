@@ -1,0 +1,145 @@
+{
+  "format": "build_log",
+  "topic": "focus_timer",
+  "title": "Build Log: A focus timer web app, Step by Step",
+  "thumbnail_text": "Built from zero",
+  "segments": [
+    {
+      "id": "demo",
+      "narration": "This is a focus timer web app, built from an empty folder by a build agent, while I recorded the screen. The finished app is 153 lines in 3 files across 3 commits. Here's how it came together, step by step.",
+      "visual": {
+        "kind": "app_demo",
+        "params": {
+          "step": "step3"
+        }
+      },
+      "claims": [
+        {
+          "text": "The finished app is 153 lines in 3 files across 3 commits.",
+          "source_id": "build_repo"
+        }
+      ],
+      "on_screen_text": "What we built",
+      "in_short": true
+    },
+    {
+      "id": "step1",
+      "narration": "First: layout and styling. The goal: show a 25:00 timer, a label and Start / Reset buttons, centred, dark theme. Get the layout right first, so the logic later has stable element ids to hook into. This commit changed 2 files, adding 57 lines and removing 0.",
+      "visual": {
+        "kind": "screen_recording",
+        "params": {
+          "step": "step1",
+          "index": 1
+        }
+      },
+      "claims": [
+        {
+          "text": "The goal: show a 25:00 timer, a label and Start / Reset buttons, centred, dark theme.",
+          "source_id": "recipe"
+        },
+        {
+          "text": "Get the layout right first, so the logic later has stable element ids to hook into.",
+          "source_id": "recipe"
+        },
+        {
+          "text": "This commit changed 2 files, adding 57 lines and removing 0.",
+          "source_id": "build_repo"
+        }
+      ],
+      "on_screen_text": "Step 1: Layout and styling",
+      "in_short": false
+    },
+    {
+      "id": "step2",
+      "narration": "Next: countdown logic. The goal: start/pause toggles a countdown that updates once per second; Reset returns to 25:00. The timer measures elapsed time against a start timestamp instead of counting ticks, so it stays accurate when the browser throttles background tabs. This commit changed 2 files, adding 57 lines and removing 0.",
+      "visual": {
+        "kind": "screen_recording",
+        "params": {
+          "step": "step2",
+          "index": 2
+        }
+      },
+      "claims": [
+        {
+          "text": "The goal: start/pause toggles a countdown that updates once per second; Reset returns to 25:00.",
+          "source_id": "recipe"
+        },
+        {
+          "text": "The timer measures elapsed time against a start timestamp instead of counting ticks, so it stays accurate when the browser throttles background tabs.",
+          "source_id": "recipe"
+        },
+        {
+          "text": "This commit changed 2 files, adding 57 lines and removing 0.",
+          "source_id": "build_repo"
+        }
+      ],
+      "on_screen_text": "Step 2: Countdown logic",
+      "in_short": false
+    },
+    {
+      "id": "step3",
+      "narration": "Finally: progress ring, sessions and shortcuts. The goal: add an SVG progress ring, a completed-session counter saved in localStorage and a Space-bar shortcut. A ring shows progress at a glance, and the keyboard shortcut means you never need the mouse while focusing. This commit changed 3 files, adding 40 lines and removing 1.",
+      "visual": {
+        "kind": "screen_recording",
+        "params": {
+          "step": "step3",
+          "index": 3
+        }
+      },
+      "claims": [
+        {
+          "text": "The goal: add an SVG progress ring, a completed-session counter saved in localStorage and a Space-bar shortcut.",
+          "source_id": "recipe"
+        },
+        {
+          "text": "A ring shows progress at a glance, and the keyboard shortcut means you never need the mouse while focusing.",
+          "source_id": "recipe"
+        },
+        {
+          "text": "This commit changed 3 files, adding 40 lines and removing 1.",
+          "source_id": "build_repo"
+        }
+      ],
+      "on_screen_text": "Step 3: Progress ring, sessions and shortcuts",
+      "in_short": true
+    },
+    {
+      "id": "wrap",
+      "narration": "8 of 8 browser tests passed on the final build, with 0 external network requests. Every step ran the full browser test suite before it was committed. I'm Compiled. See you in the next build.",
+      "visual": {
+        "kind": "bullet_card",
+        "params": {
+          "title": "Build log",
+          "lines": [
+            "3 commits, 153 lines, no dependencies",
+            "8/8 browser tests passing",
+            "0 external network requests",
+            "Every step: code → tests → commit"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "8 of 8 browser tests passed on the final build, with 0 external network requests.",
+          "source_id": "build_tests"
+        },
+        {
+          "text": "Every step ran the full browser test suite before it was committed.",
+          "source_id": "build_tests"
+        }
+      ],
+      "on_screen_text": "Build stats",
+      "in_short": false
+    }
+  ],
+  "tags": [
+    "build log",
+    "javascript",
+    "web development",
+    "playwright",
+    "ai agent",
+    "coding"
+  ],
+  "summary": "A Pomodoro-style focus timer in plain HTML, CSS and JavaScript: no frameworks, no build step. Built step by step with a test gate on every commit, recorded with Playwright.",
+  "written_by": "offline-template"
+}

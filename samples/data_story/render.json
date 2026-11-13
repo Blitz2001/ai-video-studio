@@ -1,0 +1,32 @@
+{
+  "landscape": "out/video_16x9.mp4",
+  "portrait": "out/short_9x16.mp4",
+  "srt": "out/captions.srt",
+  "duration": 136.79000000000002,
+  "chapters": [
+    [
+      2.25,
+      "Life expectancy, 1952 → 2007"
+    ],
+    [
+      26.38,
+      "Every continent, side by side"
+    ],
+    [
+      51.81,
+      "The gap is closing"
+    ],
+    [
+      70.65,
+      "Biggest movers"
+    ],
+    [
+      91.11,
+      "Is it just money?"
+    ],
+    [
+      118.03,
+      "Read this before you share it"
+    ]
+  ]
+}

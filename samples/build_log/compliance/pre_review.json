@@ -1,0 +1,56 @@
+{
+  "stage": "pre_review",
+  "results": [
+    {
+      "check": "claims_have_sources",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "no_health_finance_legal_advice",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "asset_licences",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "synthetic_content_disclosure",
+      "passed": true,
+      "severity": "block",
+      "details": [
+        "disclosed: realistic synthetic voice (kokoro/am_michael)"
+      ]
+    },
+    {
+      "check": "upload_as_private",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "build_log:tests_pass",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "build_log:no_console_errors_or_external_requests",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "build_log:no_secrets_on_screen",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    }
+  ],
+  "created_at": "2026-11-03T21:10:47+00:00"
+}

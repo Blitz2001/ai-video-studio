@@ -1,0 +1,187 @@
+1
+00:00:02,250 --> 00:00:04,484
+This is data on 142
+
+2
+00:00:04,484 --> 00:00:07,523
+countries from 1952 to 2007.
+
+3
+00:00:07,523 --> 00:00:11,813
+In 1952, average life expectancy, weighted
+
+4
+00:00:11,813 --> 00:00:15,030
+by population, was 48.9 years.
+
+5
+00:00:15,030 --> 00:00:17,264
+By 2007 it was 68.9
+
+6
+00:00:17,264 --> 00:00:20,035
+years, a change of +20.0.
+
+7
+00:00:20,035 --> 00:00:23,163
+So where did that change come
+
+8
+00:00:23,163 --> 00:00:26,380
+from, and who got left behind?
+
+9
+00:00:26,380 --> 00:00:31,027
+Split by continent, every continent's average was
+
+10
+00:00:31,027 --> 00:00:33,899
+higher in 2007 than in 1952.
+
+11
+00:00:33,899 --> 00:00:36,096
+Asia had the largest
+
+12
+00:00:36,096 --> 00:00:38,461
+gain of any continent:
+
+13
+00:00:38,461 --> 00:00:41,503
+from 42.9 years to 69.4 years.
+
+14
+00:00:41,503 --> 00:00:45,981
+Meanwhile, Africa's average stayed between 53.3
+
+15
+00:00:45,981 --> 00:00:48,769
+and 53.4 from 1992 to 2002.
+
+16
+00:00:48,769 --> 00:00:51,810
+For a decade, it barely moved.
+
+17
+00:00:51,810 --> 00:00:53,864
+Put the first year next
+
+18
+00:00:53,864 --> 00:00:55,705
+to the last, and the
+
+19
+00:00:55,705 --> 00:00:58,114
+gaps tell a different story.
+
+20
+00:00:58,114 --> 00:01:01,159
+The gap between Asia and Oceania went
+
+21
+00:01:01,159 --> 00:01:03,709
+from 26.3 years to 11.7 years.
+
+22
+00:01:03,709 --> 00:01:06,117
+But Africa was lowest at the
+
+23
+00:01:06,117 --> 00:01:08,808
+start, at 38.8, and still lowest
+
+24
+00:01:08,808 --> 00:01:10,650
+at the end, at 54.6.
+
+25
+00:01:10,650 --> 00:01:14,943
+Country by country, Oman gained the most:
+
+26
+00:01:14,943 --> 00:01:16,496
+38.1 years.
+
+27
+00:01:16,496 --> 00:01:20,697
+Vietnam gained 33.8, and Indonesia 33.2.
+
+28
+00:01:20,697 --> 00:01:23,712
+Not everyone moved forward.
+
+29
+00:01:23,712 --> 00:01:28,096
+In Zimbabwe, life expectancy was 5.0 years
+
+30
+00:01:28,096 --> 00:01:31,110
+lower in 2007 than in 1952.
+
+31
+00:01:31,110 --> 00:01:33,795
+Each bubble is a country, sized
+
+32
+00:01:33,795 --> 00:01:36,625
+by population, and they all drift
+
+33
+00:01:36,625 --> 00:01:38,511
+up and to the right.
+
+34
+00:01:38,511 --> 00:01:42,067
+In 2007, the correlation between log income
+
+35
+00:01:42,067 --> 00:01:45,404
+per person and life expectancy was 0.81.
+
+36
+00:01:45,404 --> 00:01:47,799
+In 1952, 5 of 142 countries
+
+37
+00:01:47,799 --> 00:01:50,048
+were at 70 years or more;
+
+38
+00:01:50,048 --> 00:01:51,717
+in 2007, 83 were.
+
+39
+00:01:51,717 --> 00:01:54,910
+That link is strong, but a correlation
+
+40
+00:01:54,910 --> 00:01:58,030
+alone can't tell us what causes what.
+
+41
+00:01:58,030 --> 00:02:00,212
+These are averages, so they hide
+
+42
+00:02:00,212 --> 00:02:02,625
+big differences inside each country.
+
+43
+00:02:02,625 --> 00:02:05,554
+The data comes from the Gapminder Foundation,
+
+44
+00:02:05,554 --> 00:02:08,023
+and the dataset link and the analysis
+
+45
+00:02:08,023 --> 00:02:09,976
+code are in the description.
+
+46
+00:02:09,976 --> 00:02:11,067
+I'm Compiled.
+
+47
+00:02:11,067 --> 00:02:12,790
+See you in the next one.

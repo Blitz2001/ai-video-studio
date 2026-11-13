@@ -1,0 +1,28 @@
+{
+  "landscape": "out/video_16x9.mp4",
+  "portrait": "out/short_9x16.mp4",
+  "srt": "out/captions.srt",
+  "duration": 105.37000000000003,
+  "chapters": [
+    [
+      2.25,
+      "What we built"
+    ],
+    [
+      18.25,
+      "Step 1: Layout and styling"
+    ],
+    [
+      39.41,
+      "Step 2: Countdown logic"
+    ],
+    [
+      64.47999999999999,
+      "Step 3: Progress ring, sessions and shortcuts"
+    ],
+    [
+      87.60999999999999,
+      "Build stats"
+    ]
+  ]
+}

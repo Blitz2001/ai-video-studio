@@ -1,0 +1,106 @@
+[
+  {
+    "id": "anim_hook_landscape",
+    "kind": "animation",
+    "path": "assets/hook.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib stat_count scene from gapminder data",
+    "attribution": ""
+  },
+  {
+    "id": "anim_hook_portrait",
+    "kind": "animation",
+    "path": "assets/hook_portrait.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib stat_count scene from gapminder data",
+    "attribution": ""
+  },
+  {
+    "id": "anim_trend_landscape",
+    "kind": "animation",
+    "path": "assets/trend.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib group_lines scene from gapminder data",
+    "attribution": ""
+  },
+  {
+    "id": "anim_trend_portrait",
+    "kind": "animation",
+    "path": "assets/trend_portrait.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib group_lines scene from gapminder data",
+    "attribution": ""
+  },
+  {
+    "id": "anim_gap_landscape",
+    "kind": "animation",
+    "path": "assets/gap.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib dumbbell scene from gapminder data",
+    "attribution": ""
+  },
+  {
+    "id": "anim_countries_landscape",
+    "kind": "animation",
+    "path": "assets/countries.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib bar_grow scene from gapminder data",
+    "attribution": ""
+  },
+  {
+    "id": "anim_countries_portrait",
+    "kind": "animation",
+    "path": "assets/countries_portrait.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib bar_grow scene from gapminder data",
+    "attribution": ""
+  },
+  {
+    "id": "anim_wealth_landscape",
+    "kind": "animation",
+    "path": "assets/wealth.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib bubble_time scene from gapminder data",
+    "attribution": ""
+  },
+  {
+    "id": "anim_caveats_landscape",
+    "kind": "animation",
+    "path": "assets/caveats.mp4",
+    "licence": "self-generated",
+    "origin": "matplotlib source_card scene from gapminder data",
+    "attribution": ""
+  },
+  {
+    "id": "music",
+    "kind": "music",
+    "path": "assets/music.wav",
+    "licence": "self-generated",
+    "origin": "numpy-synthesised ambient pad (avs.media.music)",
+    "attribution": ""
+  },
+  {
+    "id": "font",
+    "kind": "font",
+    "path": "/usr/share/fonts/opentype/inter/Inter-Bold.otf",
+    "licence": "OFL-1.1",
+    "origin": "caption and card typeface",
+    "attribution": ""
+  },
+  {
+    "id": "thumbnail",
+    "kind": "thumbnail",
+    "path": "out/thumbnail.png",
+    "licence": "self-generated",
+    "origin": "Pillow composite of a self-generated frame",
+    "attribution": ""
+  },
+  {
+    "id": "dataset",
+    "kind": "dataset",
+    "path": "https://www.gapminder.org/data/",
+    "licence": "CC-BY-4.0",
+    "origin": "Gapminder Foundation",
+    "attribution": "Gapminder: life expectancy, GDP per capita and population (1952-2007) - Gapminder Foundation"
+  }
+]

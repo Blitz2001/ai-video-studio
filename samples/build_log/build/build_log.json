@@ -1,0 +1,232 @@
+{
+  "recipe": "focus_timer",
+  "title": "a focus timer web app",
+  "stack": "HTML, CSS, vanilla JavaScript",
+  "pitch": "A Pomodoro-style focus timer in plain HTML, CSS and JavaScript: no frameworks, no build step.",
+  "steps": [
+    {
+      "id": "step1",
+      "title": "Layout and styling",
+      "goal": "Show a 25:00 timer, a label and Start / Reset buttons, centred, dark theme.",
+      "why": "Get the layout right first, so the logic later has stable element ids to hook into.",
+      "mode": "recipe",
+      "commit": "240276d",
+      "message": "step1: Layout and styling",
+      "added": 57,
+      "removed": 0,
+      "files": [
+        {
+          "file": "index.html",
+          "added": 20,
+          "removed": 0
+        },
+        {
+          "file": "style.css",
+          "added": 37,
+          "removed": 0
+        }
+      ],
+      "previous": {
+        "index.html": "",
+        "style.css": ""
+      },
+      "tests": {
+        "tests": [
+          {
+            "name": "shows 25:00 on load",
+            "passed": true,
+            "error": ""
+          },
+          {
+            "name": "has start and reset buttons",
+            "passed": true,
+            "error": ""
+          }
+        ],
+        "passed": 2,
+        "total": 2,
+        "console_errors": [],
+        "external_requests": []
+      }
+    },
+    {
+      "id": "step2",
+      "title": "Countdown logic",
+      "goal": "Start/pause toggles a countdown that updates once per second; Reset returns to 25:00.",
+      "why": "The timer measures elapsed time against a start timestamp instead of counting ticks, so it stays accurate when the browser throttles background tabs.",
+      "mode": "recipe",
+      "commit": "ab04e49",
+      "message": "step2: Countdown logic",
+      "added": 57,
+      "removed": 0,
+      "files": [
+        {
+          "file": "app.js",
+          "added": 56,
+          "removed": 0
+        },
+        {
+          "file": "index.html",
+          "added": 1,
+          "removed": 0
+        }
+      ],
+      "previous": {
+        "app.js": "",
+        "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Focus Timer</title>\n  <link rel=\"icon\" href=\"data:,\">\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"card\">\n    <p class=\"label\">Focus</p>\n    <h1 id=\"time\">25:00</h1>\n    <div class=\"controls\">\n      <button id=\"start\">Start</button>\n      <button id=\"reset\" class=\"ghost\">Reset</button>\n    </div>\n  </main>\n</body>\n</html>"
+      },
+      "tests": {
+        "tests": [
+          {
+            "name": "shows 25:00 on load",
+            "passed": true,
+            "error": ""
+          },
+          {
+            "name": "has start and reset buttons",
+            "passed": true,
+            "error": ""
+          },
+          {
+            "name": "counts down after start",
+            "passed": true,
+            "error": ""
+          },
+          {
+            "name": "start button becomes pause",
+            "passed": true,
+            "error": ""
+          },
+          {
+            "name": "reset returns to 25:00",
+            "passed": true,
+            "error": ""
+          }
+        ],
+        "passed": 5,
+        "total": 5,
+        "console_errors": [],
+        "external_requests": []
+      }
+    },
+    {
+      "id": "step3",
+      "title": "Progress ring, sessions and shortcuts",
+      "goal": "Add an SVG progress ring, a completed-session counter saved in localStorage and a Space-bar shortcut.",
+      "why": "A ring shows progress at a glance, and the keyboard shortcut means you never need the mouse while focusing.",
+      "mode": "recipe",
+      "commit": "80ca3ec",
+      "message": "step3: Progress ring, sessions and shortcuts",
+      "added": 40,
+      "removed": 1,
+      "files": [
+        {
+          "file": "app.js",
+          "added": 18,
+          "removed": 0
+        },
+        {
+          "file": "index.html",
+          "added": 8,
+          "removed": 1
+        },
+        {
+          "file": "style.css",
+          "added": 14,
+          "removed": 0
+        }
+      ],
+      "previous": {
+        "app.js": "// Focus timer: measures elapsed time against a start timestamp, so the\n// display stays correct even when the browser throttles timers.\nconst FOCUS_SECONDS = 25 * 60;\nconst speed = Number(new URLSearchParams(location.search).get(\"speed\")) || 1; // demo/test speed-up\n\nconst timeEl = document.getElementById(\"time\");\nconst startBtn = document.getElementById(\"start\");\nconst resetBtn = document.getElementById(\"reset\");\n\nlet remaining = FOCUS_SECONDS;\nlet startedAt = null;   // ms timestamp when the current run started\nlet atStart = remaining; // seconds remaining when the current run started\nlet ticker = null;\n\nfunction format(seconds) {\n  const s = Math.max(0, Math.ceil(seconds));\n  return `${String(Math.floor(s / 60)).padStart(2, \"0\")}:${String(s % 60).padStart(2, \"0\")}`;\n}\n\nfunction render() {\n  timeEl.textContent = format(remaining);\n  startBtn.textContent = ticker ? \"Pause\" : \"Start\";\n}\n\nfunction tick() {\n  const elapsed = ((Date.now() - startedAt) / 1000) * speed;\n  remaining = atStart - elapsed;\n  if (remaining <= 0) {\n    remaining = 0;\n    pause();\n  }\n  render();\n}\n\nfunction start() {\n  startedAt = Date.now();\n  atStart = remaining;\n  ticker = setInterval(tick, 250);\n  render();\n}\n\nfunction pause() {\n  clearInterval(ticker);\n  ticker = null;\n  render();\n}\n\nfunction reset() {\n  pause();\n  remaining = FOCUS_SECONDS;\n  render();\n}\n\nstartBtn.addEventListener(\"click\", () => (ticker ? pause() : start()));\nresetBtn.addEventListener(\"click\", reset);\nrender();",
+        "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Focus Timer</title>\n  <link rel=\"icon\" href=\"data:,\">\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"card\">\n    <p class=\"label\">Focus</p>\n    <h1 id=\"time\">25:00</h1>\n    <div class=\"controls\">\n      <button id=\"start\">Start</button>\n      <button id=\"reset\" class=\"ghost\">Reset</button>\n    </div>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+        "style.css": ":root {\n  --bg: #1a1a19;\n  --card: #242422;\n  --text: #f0efec;\n  --muted: #8d8c84;\n  --accent: #3987e5;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  background: var(--bg);\n  color: var(--text);\n  font-family: system-ui, sans-serif;\n}\n.card {\n  text-align: center;\n  padding: 48px 64px;\n  border-radius: 24px;\n  background: var(--card);\n}\n.label { color: var(--muted); letter-spacing: 0.2em; text-transform: uppercase; }\n#time { font-size: 96px; margin: 8px 0 32px; font-variant-numeric: tabular-nums; }\n.controls { display: flex; gap: 16px; justify-content: center; }\nbutton {\n  font: inherit;\n  font-size: 20px;\n  padding: 12px 32px;\n  border-radius: 999px;\n  border: 2px solid var(--accent);\n  background: var(--accent);\n  color: white;\n  cursor: pointer;\n}\nbutton.ghost { background: transparent; color: var(--text); }"
+      },
+      "tests": {
+        "tests": [
+          {
+            "name": "shows 25:00 on load",
+            "passed": true,
+            "error": ""
+          },
+          {
+            "name": "has start and reset buttons",
+            "passed": true,
+            "error": ""
+          },
+          {
+            "name": "counts down after start",
+            "passed": true,
+            "error": ""
+          },
+          {
+            "name": "start button becomes pause",
+            "passed": true,
+            "error": ""
+          },
+          {
+            "name": "reset returns to 25:00",
+            "passed": true,
+            "error": ""
+          },
+          {
+            "name": "progress ring is drawn",
+            "passed": true,
+            "error": ""
+          },
+          {
+            "name": "space bar starts the timer",
+            "passed": true,
+            "error": ""
+          },
+          {
+            "name": "completing a session increments the counter",
+            "passed": true,
+            "error": ""
+          }
+        ],
+        "passed": 8,
+        "total": 8,
+        "console_errors": [],
+        "external_requests": []
+      }
+    }
+  ],
+  "final": {
+    "files": 3,
+    "lines": 153,
+    "by_type": {
+      ".html": 28,
+      ".css": 51,
+      ".js": 74
+    },
+    "external_urls": [],
+    "commits": [
+      "240276d",
+      "ab04e49",
+      "80ca3ec"
+    ]
+  },
+  "demo": [
+    {
+      "goto": "index.html?speed=90"
+    },
+    {
+      "click": "#start"
+    },
+    {
+      "wait": 2500
+    },
+    {
+      "press": "Space"
+    },
+    {
+      "wait": 700
+    },
+    {
+      "press": "Space"
+    },
+    {
+      "wait": 2000
+    }
+  ]
+}

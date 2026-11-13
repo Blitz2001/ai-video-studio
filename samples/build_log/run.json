@@ -1,0 +1,51 @@
+{
+  "id": "20261103-210504-build_log-focus-timer",
+  "format": "build_log",
+  "topic": "focus_timer",
+  "status": "awaiting_review",
+  "created_at": "2026-11-03T21:05:04+00:00",
+  "updated_at": "2026-11-03T21:10:47+00:00",
+  "steps": [
+    {
+      "step": "research",
+      "seconds": 13.2
+    },
+    {
+      "step": "script",
+      "seconds": 0.0
+    },
+    {
+      "step": "script_gate",
+      "seconds": 0.8
+    },
+    {
+      "step": "assets",
+      "seconds": 167.9
+    },
+    {
+      "step": "voice",
+      "seconds": 38.0
+    },
+    {
+      "step": "pre_render",
+      "seconds": 0.0
+    },
+    {
+      "step": "edit",
+      "seconds": 122.8
+    },
+    {
+      "step": "package",
+      "seconds": 0.7
+    },
+    {
+      "step": "pre_review",
+      "seconds": 0.0
+    }
+  ],
+  "llm": "offline",
+  "voice": "kokoro",
+  "title": "Build Log: A focus timer web app, Step by Step",
+  "written_by": "offline-template",
+  "error": null
+}

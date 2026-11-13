@@ -1,0 +1,38 @@
+{
+  "stage": "pre_render",
+  "results": [
+    {
+      "check": "claims_have_sources",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "no_health_finance_legal_advice",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "not_too_similar_to_past_videos",
+      "passed": true,
+      "severity": "block",
+      "details": [
+        "max cosine 0.154 vs threshold 0.80 (local embedder, 1 past videos)"
+      ]
+    },
+    {
+      "check": "asset_licences",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "concept:simulation_reproducible",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    }
+  ],
+  "created_at": "2026-11-03T21:03:13+00:00"
+}

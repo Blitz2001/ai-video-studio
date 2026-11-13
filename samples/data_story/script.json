@@ -1,0 +1,328 @@
+{
+  "format": "data_story",
+  "topic": "gapminder",
+  "title": "How the World Added 20 Years of Life (1952–2007)",
+  "thumbnail_text": "+20 years of life",
+  "segments": [
+    {
+      "id": "hook",
+      "narration": "This is data on 142 countries from 1952 to 2007. In 1952, average life expectancy, weighted by population, was 48.9 years. By 2007 it was 68.9 years, a change of +20.0. So where did that change come from, and who got left behind?",
+      "visual": {
+        "kind": "stat_count",
+        "params": {
+          "title": "Average life expectancy",
+          "source": "Source: Gapminder Foundation (CC BY 4.0) · analysis: Compiled",
+          "unit_label": "life expectancy (years)",
+          "label": "population-weighted",
+          "world": {
+            "1952": 48.9,
+            "1957": 52.1,
+            "1962": 52.3,
+            "1967": 57.0,
+            "1972": 59.5,
+            "1977": 61.2,
+            "1982": 62.9,
+            "1987": 64.4,
+            "1992": 65.6,
+            "1997": 66.8,
+            "2002": 67.8,
+            "2007": 68.9
+          }
+        }
+      },
+      "claims": [
+        {
+          "text": "This is data on 142 countries from 1952 to 2007.",
+          "source_id": "dataset"
+        },
+        {
+          "text": "In 1952, average life expectancy, weighted by population, was 48.9 years.",
+          "source_id": "analysis"
+        },
+        {
+          "text": "By 2007 it was 68.9 years, a change of +20.0.",
+          "source_id": "analysis"
+        }
+      ],
+      "on_screen_text": "Life expectancy, 1952 → 2007",
+      "in_short": true
+    },
+    {
+      "id": "trend",
+      "narration": "Split by continent, every continent's average was higher in 2007 than in 1952. Asia had the largest gain of any continent: from 42.9 years to 69.4 years. Meanwhile, Africa's average stayed between 53.3 and 53.4 from 1992 to 2002. For a decade, it barely moved.",
+      "visual": {
+        "kind": "group_lines",
+        "params": {
+          "title": "Life expectancy by continent",
+          "source": "Source: Gapminder Foundation (CC BY 4.0) · analysis: Compiled",
+          "ylabel": "life expectancy (years)",
+          "groups": {
+            "Africa": {
+              "1952": 38.8,
+              "1957": 40.9,
+              "1962": 43.1,
+              "1967": 45.2,
+              "1972": 47.2,
+              "1977": 49.2,
+              "1982": 51.0,
+              "1987": 52.8,
+              "1992": 53.4,
+              "1997": 53.3,
+              "2002": 53.3,
+              "2007": 54.6
+            },
+            "Americas": {
+              "1952": 60.2,
+              "1957": 62.0,
+              "1962": 63.4,
+              "1967": 64.5,
+              "1972": 65.7,
+              "1977": 67.6,
+              "1982": 69.2,
+              "1987": 70.4,
+              "1992": 71.7,
+              "1997": 73.2,
+              "2002": 74.2,
+              "2007": 75.4
+            },
+            "Asia": {
+              "1952": 42.9,
+              "1957": 47.3,
+              "1962": 46.6,
+              "1967": 53.9,
+              "1972": 57.5,
+              "1977": 59.6,
+              "1982": 61.6,
+              "1987": 63.5,
+              "1992": 65.1,
+              "1997": 66.8,
+              "2002": 68.1,
+              "2007": 69.4
+            },
+            "Europe": {
+              "1952": 64.9,
+              "1957": 66.9,
+              "1962": 68.5,
+              "1967": 69.5,
+              "1972": 70.5,
+              "1977": 71.5,
+              "1982": 72.6,
+              "1987": 73.4,
+              "1992": 74.4,
+              "1997": 75.7,
+              "2002": 77.0,
+              "2007": 77.9
+            },
+            "Oceania": {
+              "1952": 69.2,
+              "1957": 70.3,
+              "1962": 71.0,
+              "1967": 71.2,
+              "1972": 71.9,
+              "1977": 73.3,
+              "1982": 74.6,
+              "1987": 76.0,
+              "1992": 77.4,
+              "1997": 78.6,
+              "2002": 80.2,
+              "2007": 81.1
+            }
+          }
+        }
+      },
+      "claims": [
+        {
+          "text": "Split by continent, every continent's average was higher in 2007 than in 1952.",
+          "source_id": "analysis"
+        },
+        {
+          "text": "Asia had the largest gain of any continent: from 42.9 years to 69.4 years.",
+          "source_id": "analysis"
+        },
+        {
+          "text": "Meanwhile, Africa's average stayed between 53.3 and 53.4 from 1992 to 2002.",
+          "source_id": "analysis"
+        }
+      ],
+      "on_screen_text": "Every continent, side by side",
+      "in_short": true
+    },
+    {
+      "id": "gap",
+      "narration": "Put the first year next to the last, and the gaps tell a different story. The gap between Asia and Oceania went from 26.3 years to 11.7 years. But Africa was lowest at the start, at 38.8, and still lowest at the end, at 54.6.",
+      "visual": {
+        "kind": "dumbbell",
+        "params": {
+          "title": "1952 vs 2007",
+          "source": "Source: Gapminder Foundation (CC BY 4.0) · analysis: Compiled",
+          "groups": {
+            "Africa": [
+              38.8,
+              54.6
+            ],
+            "Americas": [
+              60.2,
+              75.4
+            ],
+            "Asia": [
+              42.9,
+              69.4
+            ],
+            "Europe": [
+              64.9,
+              77.9
+            ],
+            "Oceania": [
+              69.2,
+              81.1
+            ]
+          },
+          "y0": 1952,
+          "y1": 2007,
+          "xlabel": "life expectancy (years)"
+        }
+      },
+      "claims": [
+        {
+          "text": "The gap between Asia and Oceania went from 26.3 years to 11.7 years.",
+          "source_id": "analysis"
+        },
+        {
+          "text": "But Africa was lowest at the start, at 38.8, and still lowest at the end, at 54.6.",
+          "source_id": "analysis"
+        }
+      ],
+      "on_screen_text": "The gap is closing",
+      "in_short": false
+    },
+    {
+      "id": "countries",
+      "narration": "Country by country, Oman gained the most: 38.1 years. Vietnam gained 33.8, and Indonesia 33.2. Not everyone moved forward. In Zimbabwe, life expectancy was 5.0 years lower in 2007 than in 1952.",
+      "visual": {
+        "kind": "bar_grow",
+        "params": {
+          "title": "Change in life expectancy, 1952–2007",
+          "source": "Source: Gapminder Foundation (CC BY 4.0) · analysis: Compiled",
+          "items": [
+            [
+              "Oman",
+              38.1
+            ],
+            [
+              "Vietnam",
+              33.8
+            ],
+            [
+              "Indonesia",
+              33.2
+            ],
+            [
+              "Saudi Arabia",
+              32.9
+            ],
+            [
+              "Libya",
+              31.2
+            ],
+            [
+              "Korea, Rep.",
+              31.2
+            ],
+            [
+              "Nicaragua",
+              30.6
+            ],
+            [
+              "West Bank and Gaza",
+              30.3
+            ],
+            [
+              "Zimbabwe",
+              -5.0
+            ],
+            [
+              "Swaziland",
+              -1.8
+            ]
+          ],
+          "xlabel": "change (years)"
+        }
+      },
+      "claims": [
+        {
+          "text": "Country by country, Oman gained the most: 38.1 years.",
+          "source_id": "analysis"
+        },
+        {
+          "text": "Vietnam gained 33.8, and Indonesia 33.2.",
+          "source_id": "analysis"
+        },
+        {
+          "text": "In Zimbabwe, life expectancy was 5.0 years lower in 2007 than in 1952.",
+          "source_id": "analysis"
+        }
+      ],
+      "on_screen_text": "Biggest movers",
+      "in_short": true
+    },
+    {
+      "id": "wealth",
+      "narration": "Each bubble is a country, sized by population, and they all drift up and to the right. In 2007, the correlation between log income per person and life expectancy was 0.81. In 1952, 5 of 142 countries were at 70 years or more; in 2007, 83 were. That link is strong, but a correlation alone can't tell us what causes what.",
+      "visual": {
+        "kind": "bubble_time",
+        "params": {
+          "title": "Income vs life expectancy",
+          "source": "Source: Gapminder Foundation (CC BY 4.0) · analysis: Compiled",
+          "xlabel": "GDP per person (US$, inflation-adjusted, log scale)",
+          "ylabel": "life expectancy (years)",
+          "highlight": [
+            "Asia",
+            "Africa"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "In 2007, the correlation between log income per person and life expectancy was 0.81.",
+          "source_id": "analysis"
+        },
+        {
+          "text": "In 1952, 5 of 142 countries were at 70 years or more; in 2007, 83 were.",
+          "source_id": "analysis"
+        }
+      ],
+      "on_screen_text": "Is it just money?",
+      "in_short": false
+    },
+    {
+      "id": "caveats",
+      "narration": "These are averages, so they hide big differences inside each country. The data comes from the Gapminder Foundation, and the dataset link and the analysis code are in the description. I'm Compiled. See you in the next one.",
+      "visual": {
+        "kind": "source_card",
+        "params": {
+          "title": "What this data can and can't tell us",
+          "lines": [
+            "Averages hide differences inside each country",
+            "Correlation is not causation",
+            "Data: Gapminder Foundation (CC-BY-4.0)",
+            "Dataset link + analysis code in the description"
+          ]
+        }
+      },
+      "claims": [],
+      "on_screen_text": "Read this before you share it",
+      "in_short": false
+    }
+  ],
+  "tags": [
+    "data visualization",
+    "data science",
+    "life expectancy",
+    "gapminder",
+    "open data",
+    "python",
+    "matplotlib"
+  ],
+  "summary": "An animated look at 142 countries in the Gapminder Foundation data: who gained, who stalled, and what income does and doesn't explain.",
+  "written_by": "offline-template"
+}

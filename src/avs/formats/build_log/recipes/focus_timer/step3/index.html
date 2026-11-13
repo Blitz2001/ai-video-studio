@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Focus Timer</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <p class="label">Focus</p>
+    <div class="dial">
+      <svg viewBox="0 0 220 220" aria-hidden="true">
+        <circle class="track" cx="110" cy="110" r="100"></circle>
+        <circle class="progress" cx="110" cy="110" r="100"></circle>
+      </svg>
+      <h1 id="time">25:00</h1>
+    </div>
+    <div class="controls">
+      <button id="start">Start</button>
+      <button id="reset" class="ghost">Reset</button>
+    </div>
+    <p class="sessions">Sessions done: <strong id="sessions">0</strong> · press <kbd>Space</kbd></p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "stage": "pre_render",
+  "results": [
+    {
+      "check": "claims_have_sources",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "no_health_finance_legal_advice",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "not_too_similar_to_past_videos",
+      "passed": true,
+      "severity": "block",
+      "details": [
+        "max cosine 0.000 vs threshold 0.80 (local embedder, 0 past videos)"
+      ]
+    },
+    {
+      "check": "asset_licences",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "data_story:charts_show_source",
+      "passed": true,
+      "severity": "block",
+      "details": []
+    },
+    {
+      "check": "data_story:dataset_snapshot_hashed",
+      "passed": true,
+      "severity": "block",
+      "details": [
+        "sha256 2fcca39782fa79d1aaae2ff579adf8b2d89e1ee4931aa8a131ff58e45cd38291"
+      ]
+    }
+  ],
+  "created_at": "2026-11-03T20:57:17+00:00"
+}

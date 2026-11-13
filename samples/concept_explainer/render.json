@@ -1,0 +1,28 @@
+{
+  "landscape": "out/video_16x9.mp4",
+  "portrait": "out/short_9x16.mp4",
+  "srt": "out/captions.srt",
+  "duration": 101.32,
+  "chapters": [
+    [
+      2.25,
+      "Learning = walking downhill"
+    ],
+    [
+      17.27,
+      "Follow the slope down"
+    ],
+    [
+      33.459999999999994,
+      "The learning rate"
+    ],
+    [
+      61.41,
+      "Why real training looks noisy"
+    ],
+    [
+      79.94999999999999,
+      "Recap"
+    ]
+  ]
+}
